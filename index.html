@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDS TLC SRC | Official Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PWA Installation Requirements -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#006A4E">
+    <!-- Icon Toolkit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- APPLICATION HEADER (Matches navigation structure in image.png) -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <!-- MODIFY LATER: Replace 'logo.png' with your actual image file path -->
+                <img src="logo.png" alt="UDS TLC SRC Logo" class="src-official-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Automatic fallback icon if logo.png is missing or loading -->
+                <div class="logo-fallback-icon" style="display:none;"><i class="fa-solid fa-graduation-cap"></i></div>
+                
+                <span class="brand-name">UDS TLC <span class="accent-text">SRC</span></span>
+            </div>
+            <button class="menu-toggle-btn" id="menuOpenBtn" aria-label="Open Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- SLIDE-OUT DRAWER NAVIGATION (Matches interface view in image_2.png) -->
+    <div class="nav-drawer" id="navDrawer">
+        <div class="drawer-header">
+            <div class="logo-area">
+                <span class="brand-name">UDS TLC <span class="accent-text">SRC</span></span>
+            </div>
+            <button class="menu-close-btn" id="menuCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="drawer-links">
+            <!-- Navigation links acting as a Single Page App framework -->
+            <a href="#home" class="drawer-item active"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#about" class="drawer-item"><i class="fa-solid fa-circle-info"></i> About Us</a>
+            <a href="#executives" class="drawer-item"><i class="fa-solid fa-users-gear"></i> Executives</a>
+            <a href="#news" class="drawer-item"><i class="fa-solid fa-newspaper"></i> News & Updates</a>
+            <a href="#contact" class="drawer-item"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </nav>
+        <div class="drawer-footer">
+            <button class="mode-toggle-action" id="themeToggleBtn">
+                <i class="fa-solid fa-moon"></i> <span id="themeText">Dark Mode</span>
+            </button>
+            <a href="#" target="_blank" class="portal-action-btn" id="drawerPortalBtn">Student Portal</a>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- MAIN APP WRAPPER -->
+    <main class="app-content">
+
+        <!-- HOMEPAGE PROFILE VIEW -->
+        <section id="home" class="app-section visible">
+            <div class="hero-wrapper">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-tower-cell"></i> UDS TLC Digital Hub
+                </div>
+                <h1 class="hero-title">Your Campus. <span class="highlight">Your Community.</span></h1>
+                <p class="hero-subtitle">A verified digital space for UDS TLC students to stay connected, access critical resources, and build lasting relationships.</p>
+                
+                <div class="hero-actions">
+                    <a href="#about" class="btn btn-primary">Explore More</a>
+                    <a href="#news" class="btn btn-secondary">Latest Updates</a>
+                </div>
+            </div>
+
+            <!-- Green Leadership Accent Strip -->
+            <div class="leadership-strip">
+                <div class="strip-container">
+                    <h2>University Leadership</h2>
+                    <p>Guiding academic excellence, visionary progress, and institutional integrity across our campus communities.</p>
+                </div>
+            </div>
+
+            <!-- Administration Scrolling Showcase Cards -->
+            <div class="admin-container grid-layout">
+                <!-- Admin Member 1 -->
+                <div class="profile-card scroll-reveal">
+                    <div class="card-image-box">
+                        <!-- Fits full standing images seamlessly. Replace source link with actual images later -->
+                        <img src="vc.jpg" class="admin-photo">
+                    </div>
+                    <div class="card-details">
+                        <h3>Prof. Muhammed Muniru Iddrisu</h3>
+                        <p class="title-label">Vice Chancellor</p>
+                    </div>
+                </div>
+                <!-- Admin Member 2 -->
+                <div class="profile-card scroll-reveal">
+                    <div class="card-image-box">
+                        <img src="provc.jpg" alt="Campus Principal" class="admin-photo">
+                    </div>
+                    <div class="card-details">
+                        <h3>Prof. Eliot Mahama</h3>
+                        <p class="title-label">Pro Vice Chancellor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="app-section">
+            <div class="section-header-block">
+                <h2>About The SRC</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="about-content-card">
+                <p>The Students' Representative Council (SRC) of the University for Development Studies, TLC, serves as the ultimate democratic vehicle and collective voice of the student body. We bridge communication between management and students, protecting welfare while engineering development.</p>
+                <h3 class="subsection-title">Brief History of UDS</h3>
+                <p>Established to blend academic training with intensive practical fieldwork, UDS remains Ghana's premier development-focused university, driving transformation through community-inserted training paradigms.</p>
+                
+                <div class="center-action">
+                    <a href="#executives" class="btn btn-primary-outline">View Elected Executives</a>
+                </div>
+            </div>
+
+            <!-- Animated Live Metric Elements -->
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-icon-pulse"><i class="fa-solid fa-users"></i></div>
+                    <div class="counter" data-target="16000">0</div>
+                    <p>Students Represented</p>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-icon-pulse"><i class="fa-solid fa-handshake"></i></div>
+                    <div class="counter" data-target="50">0</div>
+                    <p>Clubs & Societies</p>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-icon-pulse"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="counter" data-target="50">0</div>
+                    <p>Events Per Year</p>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-icon-pulse"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div class="counter" data-target="1">0</div>
+                    <p>United Voice</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXECUTIVES SECTION -->
+        <section id="executives" class="app-section">
+            <div class="section-header-block">
+                <h2>SRC Executives</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Presidential Spotlight Tier -->
+            <div class="presidential-tier">
+                <div class="profile-card presidential-card scroll-reveal">
+                    <div class="card-image-box">
+                        <img src="umb.jpg" alt="SRC President" class="admin-photo">
+                    </div>
+                    <div class="card-details">
+                        <h3>H.E. Umar Maryam Boresa</h3>
+                        <p class="title-label">SRC President (Elect)</p>
+                        <span class="email-tag"><i class="fa-solid fa-envelope"></i> president.src@uds.edu.gh</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standard Executive Columns -->
+            <div class="executives-grid grid-layout">
+                <div class="profile-card scroll-reveal">
+                    <div class="card-image-box">
+                        <img src="https://via.placeholder.com/400x500?text=Vice+President" alt="Vice President" class="admin-photo">
+                    </div>
+                    <div class="card-details">
+                        <h3>Hon. Vice Leader</h3>
+                        <p class="title-label">SRC Vice President</p>
+                        <span class="email-tag">vp.src@uds.edu.gh</span>
+                    </div>
+                </div>
+                <div class="profile-card scroll-reveal">
+                    <div class="card-image-box">
+                        <img src="https://via.placeholder.com/400x500?text=General+Secretary" alt="General Secretary" class="admin-photo">
+                    </div>
+                    <div class="card-details">
+                        <h3>Hon. Diligent Scribe</h3>
+                        <p class="title-label">General Secretary</p>
+                        <span class="email-tag">sec.src@uds.edu.gh</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NUGS Executives Split -->
+            <div class="section-subheading-block">
+                <h3>NUGS Executives</h3>
+            </div>
+            <div class="nugs-grid grid-layout">
+                <div class="profile-card scroll-reveal">
+                    <div class="card-image-box">
+                        <img src="https://via.placeholder.com/400x500?text=NUGS+President" alt="NUGS President" class="admin-photo">
+                    </div>
+                    <div class="card-details">
+                        <h3>Hon. National Envoy</h3>
+                        <p class="title-label">NUGS President</p>
+                    </div>
+                </div>
+                <div class="profile-card scroll-reveal">
+                    <div class="card-image-box">
+                        <img src="https://via.placeholder.com/400x500?text=NUGS+Secretary" alt="NUGS Secretary" class="admin-photo">
+                    </div>
+                    <div class="card-details">
+                        <h3>Hon. Local Secretary</h3>
+                        <p class="title-label">NUGS Secretary</p>
+                    </div>
+                </div>
+                <div class="profile-card scroll-reveal">
+                    <div class="card-image-box">
+                        <img src="https://via.placeholder.com/400x500?text=NUGS+Treasurer" alt="NUGS Treasurer" class="admin-photo">
+                    </div>
+                    <div class="card-details">
+                        <h3>Hon. Asset Manager</h3>
+                        <p class="title-label">NUGS Treasurer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMAGE-ENABLED NEWS SECTION -->
+        <section id="news" class="app-section">
+            <div class="section-header-block">
+                <h2>News & Resource Central</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Document Download Card -->
+            <div class="resource-download-banner">
+                <div class="resource-info">
+                    <h4><i class="fa-solid fa-file-pdf"></i> SRC Official Constitution</h4>
+                    <p>Download, read, and understand the legal framework governing your rights as a student.</p>
+                </div>
+                <!-- MODIFY LATER: Put actual PDF file route in the link below -->
+                <a href="constitution.pdf" download class="btn btn-primary"><i class="fa-solid fa-download"></i> Download</a>
+            </div>
+
+            <!-- Dynamic News Grid. Articles with Images load inside here -->
+            <div id="dynamicNewsContainer" class="news-feed-grid grid-layout">
+                <div class="news-loading-placeholder">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i> Synchronizing live news boards...
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & ENGAGEMENT GRID -->
+        <section id="contact" class="app-section">
+            <div class="section-header-block">
+                <h2>Get In Touch</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-details-box">
+                    <h3>Contact Information</h3>
+                    <p><i class="fa-solid fa-envelope"></i> srctlc@uds.edu.gh</p>
+                    <p><i class="fa-solid fa-phone"></i> +233 59 816 0732</p>
+                    
+                    <h3 class="spacer-top">SRC Secretariat Hours</h3>
+                    <p><i class="fa-solid fa-clock"></i> Monday – Friday: 8:00 AM – 5:00 PM</p>
+                    <p><i class="fa-solid fa-calendar-day"></i> Weekends: Closed (Emergency Hotlines Active)</p>
+
+                    <!-- Realtime Google Sheet SMS Input Box -->
+                    <div class="sms-subscription-box">
+                        <h4><i class="fa-solid fa-message-sms"></i> Real-time SMS Broadcasts</h4>
+                        <p>Subscribe to receive institutional updates directly to your terminal device.</p>
+                        <form id="smsSubscriptionForm" class="inline-form">
+                            <input type="tel" id="smsPhoneInput" placeholder="Enter Phone (e.g. +233...)" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                        <div id="smsFeedback" class="form-feedback"></div>
+                    </div>
+                </div>
+
+                <!-- Live Google Sheet Grievance Textbox Form -->
+                <div class="contact-form-box">
+                    <h3>Send a Direct Query</h3>
+                    <form id="campusContactForm">
+                        <div class="form-group">
+                            <label for="formName">Full Name</label>
+                            <input type="text" id="formName" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmail">Email Address</label>
+                            <input type="email" id="formEmail" required placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage">Message / Student Grievance</label>
+                            <textarea id="formMessage" rows="5" required placeholder="State your query here clearly..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit Message</button>
+                    </form>
+                    <div id="contactFeedback" class="form-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- GLOBAL COMPACT FOOTER -->
+    <footer class="app-footer">
+        <div class="footer-top">
+            <div class="footer-column brand-desc">
+                <h3>UDS SRC</h3>
+                <p>Nurturing outstanding student leadership built on foundational pillars of service, transparency, advocacy, and collective student development.</p>
+            </div>
+            <div class="footer-column links-box">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#news">News</a>
+                <a href="#executives">Executives</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-column social-box">
+                <h4>Connect With Us</h4>
+                <div class="social-row">
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UDS SRC. All rights reserved.</p>
+            <div class="footer-credits">
+                <a href="#" id="footerPortalBtn" target="_blank" class="footer-portal-link"><i class="fa-solid fa-graduation-cap"></i> Student Portal</a>
+                <span class="dev-tag">Designed by <strong>Azz Internet Hub</strong></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Expansion Fullscreen Box -->
+    <div id="photoLightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxTargetImg" alt="Enlarged view">
+        <div id="lightboxCaption"></div>
+    </div>
+
+    <!-- Initialization Scripts -->
+    <script src="news-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
