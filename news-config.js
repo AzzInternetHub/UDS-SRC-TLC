@@ -5,7 +5,7 @@
 
 const SRC_CONFIG = {
     // Copy/Paste your completed Google Apps Script Deployment URL here below:
-    GOOGLE_SHEET_WEBAPP_URL: "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec",
+    GOOGLE_SHEET_WEBAPP_URL: "https://script.google.com/macros/s/AKfycbybOFykWtq9Jnb7o0t5yX1AJxjjMQu5oBp0XRFjsHFMzVj6iTKMdYdbUgEjL274t2tTmg/exec",
     
     // Centralized access links
     STUDENT_PORTAL_URL: "https://portal.uds.edu.gh",
