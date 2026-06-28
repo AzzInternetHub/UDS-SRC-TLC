@@ -3,12 +3,12 @@
   "name": "UDS TLC Student Representative Council",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192x192?text=SRC+Logo",
+      "src": "one.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://via.placeholder.com/512x512?text=SRC+Logo",
+      "src": "two.png",
       "type": "image/png",
       "sizes": "512x512"
     }
